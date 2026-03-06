@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recuperar contraseña - TeleSalud</title>
+  <link rel="stylesheet" href="../Style/style.css">
+  <link rel="stylesheet" href="../Style/responsive.css">
+  <link rel="stylesheet" href="../Style/components.css">
+</head>
+<body class="global">
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <img src="../Imagenes/TS-icon.png" alt="Logo TeleSalud" class="auth-logo">
+      <h1>Recuperar contraseña</h1>
+
+      <form id="resetForm" novalidate>
+        <div class="form-group">
+          <label for="emailR">Correo electrónico</label>
+          <input type="email" id="emailR" name="emailR" placeholder="Ingresa tu correo registrado" required>
+        </div>
+
+        <p>
+          Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.
+        </p>
+
+        <button type="submit" class="btn-auth">Enviar enlace de recuperación</button>
+
+        <div class="auth-links">
+          <a href="auth.html">Volver a iniciar sesión</a>
+          <a href="crearcuenta.html">Crear nueva cuenta</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer-ts">
+    <p>&copy; 2025 TeleSalud - TS. Todos los derechos reservados.</p>
+    <div class="footer-social">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('resetForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const email = document.getElementById('emailR').value.trim();
+
+    if(!email){
+      alert('Por favor ingresa tu correo electrónico.');
+      return;
+    }
+
+    alert('Se ha enviado un enlace de recuperación a: ' + email);
+    window.location.href = 'auth.html';
+  });
+</script>
+
+</body>
+</html>
+

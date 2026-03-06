@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendamiento - TeleSalud</title>
+  <link rel="stylesheet" href="Style/style.css" />
+  <link rel="stylesheet" href="Style/responsive.css">
+  <link rel="stylesheet" href="Style/components.css">
+</head>
+<body class="global">
+
+  <aside class="sidebar">
+    <h2>TeleSalud</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">🏠 Página Principal</a></li>
+        <li><a href="dashboard.html">📊 Dashboard</a></li> 
+        <li><a href="videollamada.html">📹 Videollamada</a></li>
+        <li><a href="historial.html">📑 Historial médico</a></li>
+        <li><a href="login/auth.html">↩️ Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <h1>Agenda del Paciente</h1>
+      <p>Gestiona y programa tus consultas médicas</p>
+    </header>
+
+    <section class="card">
+      <h2>📅 Próximas Citas Médicas</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Hora</th>
+              <th>Médico</th>
+              <th>Especialidad</th>
+              <th>Ubicación</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>05/10/2025</td>
+              <td>10:00 AM</td>
+              <td>Dra. María Gómez</td>
+              <td>Medicina General</td>
+              <td>Sede Principal - Medellín</td>
+              <td><span class="status-confirmed">✅ Confirmada</span></td>
+            </tr>
+            <tr>
+              <td>15/10/2025</td>
+              <td>02:30 PM</td>
+              <td>Dr. Carlos Ruiz</td>
+              <td>Cardiología</td>
+              <td>Sede Centro - Medellín</td>
+              <td><span class="status-pending">🟡 Pendiente</span></td>
+            </tr>
+            <tr>
+              <td>25/10/2025</td>
+              <td>09:00 AM</td>
+              <td>Dra. Sofía López</td>
+              <td>Nutrición</td>
+              <td>Consulta Virtual</td>
+              <td><span class="status-confirmed">✅ Confirmada</span></td>
+            </tr>
+            <tr>
+              <td>10/11/2025</td>
+              <td>08:00 AM</td>
+              <td>Dr. Andrés Martínez</td>
+              <td>Dermatología</td>
+              <td>Sede Norte - Medellín</td>
+              <td><span class="status-pending">🟡 Pendiente</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>🆕 Agendar Nueva Cita</h2>
+      
+      <div class="specialty-selection">
+        <h3>👨‍⚕️ Seleccione Especialidad</h3>
+        <div class="specialty-grid">
+          <div class="specialty-item">
+            <div class="specialty-icon">❤️</div>
+            <div class="specialty-info">
+              <h4>Medicina General</h4>
+              <p>Consulta general y chequeos</p>
+              <span class="availability">Disponible</span>
+            </div>
+          </div>
+          
+          <div class="specialty-item">
+            <div class="specialty-icon">👁 </div>
+            <div class="specialty-info">
+              <h4>Cardiología</h4>
+              <p>Especialista en corazón</p>
+              <span class="availability">Disponible</span>
+            </div>
+          </div>
+          
+          <div class="specialty-item">
+            <div class="specialty-icon">🔬</div>
+            <div class="specialty-info">
+              <h4>Dermatología</h4>
+              <p>Cuidado de la piel</p>
+              <span class="availability">Disponible</span>
+            </div>
+          </div>
+          
+          <div class="specialty-item">
+            <div class="specialty-icon">🍎</div>
+            <div class="specialty-info">
+              <h4>Nutrición</h4>
+              <p>Planificación alimenticia</p>
+              <span class="availability">Disponible</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3>📅 Calendario de Disponibilidad</h3>
+        <div class="calendar">
+          <div class="calendar-header">
+            <div class="calendar-nav">‹</div>
+            <div class="calendar-month">Octubre 2025</div>
+            <div class="calendar-nav">›</div>
+          </div>
+          
+          <div class="calendar-weekdays">
+            <div>Lun</div>
+            <div>Mar</div>
+            <div>Mié</div>
+            <div>Jue</div>
+            <div>Vie</div>
+            <div>Sáb</div>
+            <div>Dom</div>
+          </div>
+          
+          <div class="calendar-days">
+            <div class="calendar-day other-month">29</div>
+            <div class="calendar-day other-month">30</div>
+            <div class="calendar-day">1</div>
+            <div class="calendar-day">2</div>
+            <div class="calendar-day">3</div>
+            <div class="calendar-day">4</div>
+            <div class="calendar-day">5</div>
+            <div class="calendar-day">6</div>
+            <div class="calendar-day">7</div>
+            <div class="calendar-day">8</div>
+            <div class="calendar-day">9</div>
+            <div class="calendar-day available">10</div>
+            <div class="calendar-day available">11</div>
+            <div class="calendar-day">12</div>
+            <div class="calendar-day available">13</div>
+            <div class="calendar-day available">14</div>
+            <div class="calendar-day available">15</div>
+            <div class="calendar-day">16</div>
+            <div class="calendar-day">17</div>
+            <div class="calendar-day available">18</div>
+            <div class="calendar-day available">19</div>
+            <div class="calendar-day">20</div>
+            <div class="calendar-day">21</div>
+            <div class="calendar-day available">22</div>
+            <div class="calendar-day available">23</div>
+            <div class="calendar-day">24</div>
+            <div class="calendar-day available">25</div>
+            <div class="calendar-day">26</div>
+            <div class="calendar-day">27</div>
+            <div class="calendar-day available">28</div>
+            <div class="calendar-day available">29</div>
+            <div class="calendar-day">30</div>
+            <div class="calendar-day">31</div>
+            <div class="calendar-day other-month">1</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3>🕐 Horarios Disponibles/Ocupados</h3>
+        <div class="time-slots">
+          <div class="time-slot available">
+            <span>08:00 AM</span>
+            <span>Disponible</span>
+          </div>
+          <div class="time-slot available">
+            <span>09:00 AM</span>
+            <span>Disponible</span>
+          </div>
+          <div class="time-slot available">
+            <span>10:00 AM</span>
+            <span>Disponible</span>
+          </div>
+          <div class="time-slot booked">
+            <span>11:00 AM</span>
+            <span>Ocupado</span>
+          </div>
+          <div class="time-slot available">
+            <span>02:00 PM</span>
+            <span>Disponible</span>
+          </div>
+          <div class="time-slot available">
+            <span>03:00 PM</span>
+            <span>Disponible</span>
+          </div>
+          <div class="time-slot booked">
+            <span>04:00 PM</span>
+            <span>Ocupado</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIRMACIÓN DE CITA -->
+    <section class="card">
+      <h2>✅ Confirmación de Cita</h2>
+      <div class="appointment-confirmation">
+        <div class="confirmation-details">
+          <div class="detail-item">
+            <strong>Especialidad:</strong>
+            <span>Medicina General</span>
+          </div>
+          <div class="detail-item">
+            <strong>Médico:</strong>
+            <span>Dra. María Gómez</span>
+          </div>
+          <div class="detail-item">
+            <strong>Fecha:</strong>
+            <span>15/10/2025</span>
+          </div>
+          <div class="detail-item">
+            <strong>Hora:</strong>
+            <span>10:00 AM</span>
+          </div>
+          <div class="detail-item">
+            <strong>Modalidad:</strong>
+            <span>Consulta Virtual</span>
+          </div>
+        </div>
+        
+        <div class="confirmation-message">
+          <p>📧 Se enviará un recordatorio a tu correo electrónico 24 horas antes de la cita.</p>
+          <p>📱 Recibirás un enlace de acceso a la videollamada 15 minutos antes.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer-ts">
+    <p>&copy; 2025 TeleSalud - TS. Todos los derechos reservados.</p>
+    <div class="footer-social">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>

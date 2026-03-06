@@ -1,0 +1,94 @@
+.footer-ts {
+  background: #2e7d32;   /* verde oscuro para contraste */
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 2rem;       /* separa el footer del contenido */
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 6px 12px;
+  background: #4caf50;    /* verde más claro para botones */
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: #1b5e20;
+}
+
+.sidebar {
+  width: 240px;
+  background: green;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1.5rem 1rem;
+}
+
+.sidebar h2 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: #C8E6C9;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 1rem 0;
+}
+
+.sidebar ul li a {
+  color: #e6fffa;
+  text-decoration: none;
+  display: block;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background: #C8E6C9;
+  color: green;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;  /* separación extra abajo */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-top: 4px solid green;
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: green;
+    border-bottom: 1px solid #c8e6c9;
+    padding-bottom: 6px;
+}
+
+.card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card ul li {
+    margin: 6px 0;
+    line-height: 1.4;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Iniciar sesión - TeleSalud</title>
+  <link rel="stylesheet" href="../Style/style.css">
+  <link rel="stylesheet" href="../Style/responsive.css">
+  <link rel="stylesheet" href="../Style/components.css">
+</head>
+<body class="global">
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <img src="../Imagenes/TS-icon.png" alt="Logo TeleSalud" class="auth-logo">
+      <h1>Iniciar sesión</h1>
+
+      <form id="loginForm" novalidate>
+        <!-- SOLO 2 CAMPOS: usuario y contraseña -->
+        <div class="form-group">
+          <label for="usuario">Usuario o correo electrónico</label>
+          <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario" required>
+        </div>
+
+        <div class="form-group">
+          <label for="clave">Contraseña</label>
+          <input type="password" id="clave" name="clave" placeholder="Ingresa tu contraseña" required>
+        </div>
+
+        <div class="auth-links">
+          <a href="contrasena.html">¿Olvidaste tu contraseña?</a>
+          <a href="crearcuenta.html">Crear nueva cuenta</a>
+        </div>
+
+        <!-- BOTÓN CORREGIDO -->
+        <button type="submit" class="btn-auth">Iniciar sesión</button>
+      </form>
+
+      <p class="auth-extra">
+        Al iniciar sesión aceptas nuestros 
+        <a href="terminos.html">Términos y condiciones</a>.
+      </p>
+    </div>
+  </div>
+
+  <footer class="footer-ts">
+    <!-- COPYRIGHT CORREGIDO -->
+    <p>&copy; 2025 TeleSalud - TS. Todos los derechos reservados.</p>
+    <div class="footer-social">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const usuario = document.getElementById('usuario').value.trim();
+    const clave = document.getElementById('clave').value;
+
+    if(!usuario || !clave){ 
+      alert('Por favor completa todos los campos.'); 
+      return; 
+    }
+
+    // SIMULACIÓN DE LOGIN EXITOSO - REDIRIGE AL DASHBOARD
+    alert('Inicio de sesión exitoso. Redirigiendo al dashboard...');
+    window.location.href = '../dashboard.html'; // RUTA CORRECTA AL DASHBOARD
+  });
+</script>
+
+</body>
+</html>
+
+
+

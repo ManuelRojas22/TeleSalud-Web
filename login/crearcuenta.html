@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crear nueva cuenta - TeleSalud</title>
+  <link rel="stylesheet" href="../Style/style.css">
+  <link rel="stylesheet" href="../Style/responsive.css">
+  <link rel="stylesheet" href="../Style/components.css">
+</head>
+<body class="global">
+
+  <div class="auth-container">
+    <div class="auth-card" role="region" aria-label="Formulario de registro">
+      <img src="../Imagenes/TS-icon.png" alt="Logo TeleSalud" class="auth-logo">
+      <h1>Crear nueva cuenta</h1>
+
+      <form id="registerForm" novalidate>
+        <!-- DATOS PERSONALES -->
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+        </div>
+
+        <!-- INFORMACIÓN MÉDICA -->
+        <div class="form-group">
+          <label for="alergias">Alergias conocidas</label>
+          <input type="text" id="alergias" name="alergias" placeholder="Ej: Penicilina, mariscos">
+        </div>
+
+        <div class="form-group">
+          <label for="condiciones">Condiciones médicas</label>
+          <input type="text" id="condiciones" name="condiciones" placeholder="Ej: Hipertensión, diabetes">
+        </div>
+
+        <div class="form-group">
+          <label for="medicamentos">Medicamentos actuales</label>
+          <input type="text" id="medicamentos" name="medicamentos" placeholder="Ej: Losartán 50mg">
+        </div>
+
+        <!-- USUARIO Y CONTRASEÑA -->
+        <div class="form-group">
+          <label for="usuarioR">Usuario</label>
+          <input type="text" id="usuarioR" name="usuarioR" placeholder="Elige un usuario" required>
+        </div>
+
+        <div class="form-group">
+          <label for="claveR">Contraseña</label>
+          <input type="password" id="claveR" name="claveR" placeholder="Contraseña" required>
+        </div>
+
+        <div class="form-group">
+          <label for="claveR2">Confirmar contraseña</label>
+          <input type="password" id="claveR2" name="claveR2" placeholder="Repite la contraseña" required>
+        </div>
+
+        <!-- TÉRMINOS Y CONDICIONES -->
+        <div class="form-group">
+          <label>
+            <input type="checkbox" required> Acepto los <a href="terminos.html">Términos y condiciones</a>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-auth">Registrarse</button>
+      </form>
+
+      <p class="auth-extra">
+        ¿Ya tienes cuenta? <a href="auth.html">Inicia sesión aquí</a>
+      </p>
+    </div>
+  </div>
+
+  <footer class="footer-ts">
+    <p>&copy; 2025 TeleSalud - TS. Todos los derechos reservados.</p>
+    <div class="footer-social">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('registerForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const nombre = document.getElementById('nombre').value.trim();
+    const apellido = document.getElementById('apellido').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const usuario = document.getElementById('usuarioR').value.trim();
+    const clave = document.getElementById('claveR').value;
+    const clave2 = document.getElementById('claveR2').value;
+    
+    if(!nombre || !apellido || !email || !usuario || !clave || !clave2){ 
+      alert('Por favor completa todos los campos obligatorios.'); 
+      return; 
+    }
+    if(clave !== clave2){ 
+      alert('Las contraseñas no coinciden.'); 
+      return; 
+    }
+
+    // Simulación de registro exitoso
+    alert('Cuenta creada exitosamente. Se ha enviado un email de verificación.');
+    window.location.href = 'auth.html';
+  });
+</script>
+
+</body>
+</html>
+

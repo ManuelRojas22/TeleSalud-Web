@@ -1,0 +1,227 @@
+/* ===== RESPONSIVE CSS - CORRECCIÓN CUADRO RECORTADO ===== */
+
+/* RESET BÁSICO PARA MÓVILES */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* ===== MÓVILES (768px o menos) ===== */
+@media (max-width: 768px) {
+  /* HEADER - Evitar que se salga */
+  .header1 {
+    flex-direction: column;
+    height: auto !important;
+    padding: 10px !important;
+    position: relative !important;
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+  .header1 nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav1 {
+    font-size: 12px !important;
+    padding: 6px 10px !important;
+    margin: 2px !important;
+    white-space: nowrap;
+  }
+
+  .container {
+    font-size: 20px !important;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* CONTENIDO PRINCIPAL - Ajustar para que quepa */
+  .mainindex, .mainindex2 {
+    margin: 80px 10px 20px !important;
+    padding: 15px !important;
+    width: calc(100% - 20px) !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    position: relative;
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+  .h1index {
+    font-size: 24px !important;
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  .fila-p1index {
+    flex-direction: column !important;
+    gap: 15px !important;
+    width: 100% !important;
+  }
+
+  .p1index {
+    width: 100% !important;
+    padding: 15px !important;
+    font-size: 14px !important;
+    line-height: 1.4;
+    margin: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .img-index {
+    position: relative !important;
+    left: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 300px !important;
+    height: auto !important;
+    display: block;
+    margin: 15px auto !important;
+  }
+
+  /* SIDEBAR - Para páginas internas */
+  .sidebar {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 8px !important;
+  }
+
+  .sidebar h2 {
+    display: none;
+  }
+
+  .sidebar ul {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .sidebar ul li {
+    margin: 0 !important;
+  }
+
+  .sidebar ul li a {
+    padding: 6px 8px !important;
+    font-size: 11px !important;
+    white-space: nowrap;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 10px !important;
+  }
+}
+
+/* ===== GALAXY S5+ ESPECÍFICO (360px) ===== */
+@media (max-width: 360px) {
+  .header1 {
+    padding: 8px 5px !important;
+  }
+
+  .nav1 {
+    font-size: 10px !important;
+    padding: 4px 6px !important;
+    margin: 1px !important;
+  }
+
+  .container {
+    font-size: 18px !important;
+  }
+
+  .mainindex, .mainindex2 {
+    margin: 70px 5px 10px !important;
+    padding: 10px !important;
+    width: calc(100% - 10px) !important;
+  }
+
+  .h1index {
+    font-size: 20px !important;
+  }
+
+  .p1index {
+    padding: 10px !important;
+    font-size: 12px !important;
+  }
+
+  .img-index {
+    max-width: 250px !important;
+  }
+
+  .sidebar ul li a {
+    font-size: 10px !important;
+    padding: 4px 6px !important;
+  }
+}
+
+/* ===== CORRECCIÓN ESPECÍFICA PARA CUADROS VERDES ===== */
+@media (max-width: 768px) {
+  .mainindex, .mainindex2 {
+    background-color: lightgreen;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  /* Asegurar que el texto no se salga */
+  .p1index {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+}
+
+/* ===== PREVENIR SCROLL HORIZONTAL ===== */
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ===== MEJORAS DE TEXTO PARA MÓVILES ===== */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  h1, h2, h3 {
+    line-height: 1.2;
+  }
+}
+
+  .specialty-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .time-slots {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .appointment-confirmation {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .calendar-day {
+    padding: 8px 5px;
+    font-size: 14px;
+  }
+
+  
